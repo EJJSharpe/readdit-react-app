@@ -1,22 +1,24 @@
-.topicsContainer{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    background-color: white;
-    border-style: solid;
-    border-radius: 0.3rem;
-    border-width: 0.15rem;
+@import './variables.scss';
 
-    h2{ 
-        margin: 0.25rem;
-    }
+
+.container{
+    text-align: center;
+    background-color: #192734;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.topicsContainer{
+
+    
 }
 
 .topicsList{
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+
     
 }
 
@@ -26,7 +28,11 @@
     width: min-content;
     padding-right: 0.25rem;
     padding-left: 0.25rem;
-    color: blue;
+    color: white;
     border-radius: 0.3rem;
+    background-color: $lightblue;
+    padding: 0.1rem;
+    margin: 0.1rem;
+    margin-bottom: 1rem;
     
 }

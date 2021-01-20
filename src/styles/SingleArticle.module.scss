@@ -1,15 +1,26 @@
-.singleArticleContainer {
-    background-color: white;
-    border-radius: 0.3rem;
-    width: 100%;
+@import './variables.scss';
+
+.container {
+    background-color: #192734;;
+    border-radius: 1rem;
+    width: 85%;
+    margin: auto;
+
+}
+
+.article{
+    margin: 2rem;
 
     h3{
-        color: blue;
+        color: $lightblue;
         padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
+        padding-top: 1rem;
+        font-size: 2rem;
+        padding-left: 2rem;
     }
 
     p{
         padding-top: 0.5rem;
+        color: white;
     }
 }

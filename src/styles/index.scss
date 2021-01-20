@@ -1,11 +1,19 @@
 @import './variables.scss';
 
 html, body{
-    background-color: grey;
+    background-color: #15202B;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Verdana', sans-serif
+    font-family: 'Helvetica Neue', sans-serif
+}
+
+p{
+    color: white;
+}
+
+h1, h2, h3, a{
+    color: $darkblue;
 }
 
 .App{

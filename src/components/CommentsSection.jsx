@@ -15,7 +15,7 @@ const CommentsSection = ({ article_id, user }) => {
         }
 
         loadContent()
-    }, [])
+    }, [article_id])
 
     const handleDeleteComment = async (id) => {
         const commentsCopy = [...comments]
@@ -35,15 +35,15 @@ const CommentsSection = ({ article_id, user }) => {
                 return (
                     <div key={comment_id} className={styles.singleComment}>
                         <p>{body}</p>
-                        <p>{author}</p>
+                        <p className={styles.author}>{author}</p>
                         <Voter votes={votes} comment_id={comment_id} />
                         <p>{new Date(created_at).toDateString()}</p>
-                        {author === user ? <button onClick={() => { handleDeleteComment(comment_id) }}>Delete</button> : null}
+                        {author === user ? <button className={styles.deleteButton} onClick={() => { handleDeleteComment(comment_id) }}><i class='bx bx-trash'></i></button> : null}
                     </div>
 
                 )
             })}
-        </div>
+        </div >
     );
 };
 

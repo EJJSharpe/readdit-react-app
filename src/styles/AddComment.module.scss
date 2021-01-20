@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.addComment{
+    align-items: center;
+}
+
+.formContainer{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formTextInput{
+    margin-left: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    border-style: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 3px solid $lightblue;
+}
+
+.submitButton{
+    background: $lightblue;
+    border-radius: 1rem;
+    border-style: none;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}

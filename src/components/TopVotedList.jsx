@@ -16,13 +16,14 @@ const TopVotedList = () => {
 
     return (
         <div className={styles.topVotedList}>
-            <h2>Top Voted List</h2>
+
             <div className={styles.cardsContainer}>
+                <h2>Top Voted List</h2>
                 {topVotedList.map(article => {
                     return (
                         <div key={article.article_id} className={styles.articleCard}>
                             <Link className={styles.link} to={`/article/${article.article_id}`}><h3>{article.title}</h3></Link>
-                            <p>{article.votes}</p>
+                            <p>{article.votes} <i class='bx bx-like' ></i></p>
                         </div>
                     )
                 })

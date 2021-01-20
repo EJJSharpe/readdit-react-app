@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.container{
+    display: flex;
+    margin-top: 1rem;
+
+    p{
+        color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 1.1rem;
+    }
+}
+
+.upVote{
+    background: green;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    line-height: 0.25em;
+}
+
+.downVote{
+    background: red;
+    border: none;
+    border-radius: 1rem;
+    padding: 5px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    line-height: 0.25em;
+}

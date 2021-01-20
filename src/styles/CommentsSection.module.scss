@@ -1,11 +1,33 @@
+@import './variables.scss';
+
 .commentsSection{
-    background-color: white;
-    border-radius: 0.3rem;
+    background-color: $transblue;
+    border-radius: 1rem;
     margin-top: 0;
     width: 100%;
 }
 
 .singleComment{
-    margin-top: 0.5rem;
-    border-style: solid;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: $darkblue;
+    border-bottom: 1px solid $lightblue;
+    padding: 1rem;
+    position: relative;
+}
+
+.deleteButton{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 5rem;
+    line-height: 0.25em;
+    padding: 0.5rem;
+    border-style: none;
+    font-size: 1.5rem;
+}
+
+.author{
+    color: $lightblue;
+    font-weight: bold;
 }

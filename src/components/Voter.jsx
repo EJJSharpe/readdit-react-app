@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { editArticleVotes, editCommentVotes } from '../api'
+import styles from '../styles/Voter.module.scss'
+import 'boxicons'
 
 const Voter = ({ votes, comment_id, article_id }) => {
     const [voteChange, setVoteChange] = useState(0)
@@ -30,11 +32,11 @@ const Voter = ({ votes, comment_id, article_id }) => {
     }, [voteChange])
 
     return (
-        <div>
-            <p>votes: {votes + voteChange}</p>
-            <button disabled={upVote} onClick={() => handleVote(1)}>👍</button>
-            <button disabled={downVote} onClick={() => handleVote(-1)}>👎</button>
-        </div>
+        <div className={styles.container}>
+            <button className={styles.upVote} disabled={upVote} onClick={() => handleVote(1)}><i class='bx bx-like' ></i></button>
+            <p>{votes + voteChange}</p>
+            <button className={styles.downVote} disabled={downVote} onClick={() => handleVote(-1)}><i class='bx bx-dislike'></i></button>
+        </div >
     );
 };
 

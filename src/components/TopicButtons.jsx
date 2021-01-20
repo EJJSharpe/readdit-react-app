@@ -14,21 +14,24 @@ const TopicButtons = () => {
     }, [])
 
     return (
-        <div className={styles.topicsContainer}>
+        <div className={styles.container}>
             <h2>Topics</h2>
-            <ul className={styles.topicsList}>
-                {topicsList.map(topic => {
-                    return (
-                        <Link
-                            className={styles.topicLink}
-                            key={topic.slug}
-                            to={`/${topic.slug}`}>
-                            <li className={styles.topicListItem}>
-                                {topic.slug}
-                            </li>
-                        </Link>)
-                })}
-            </ul>
+            <div className={styles.topicsContainer}>
+
+                <ul className={styles.topicsList}>
+                    {topicsList.map(topic => {
+                        return (
+                            <Link
+                                className={styles.topicLink}
+                                key={topic.slug}
+                                to={`/${topic.slug}`}>
+                                <li className={styles.topicListItem}>
+                                    {topic.slug}
+                                </li>
+                            </Link>)
+                    })}
+                </ul>
+            </div>
         </div>
     );
 };
