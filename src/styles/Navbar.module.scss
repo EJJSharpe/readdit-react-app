@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+
+    p{
+        padding-right: 1rem;
+        span{
+            color: green;
+            font-weight: bold;
+        }
+    }
+}
+
+.readditLink {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    text-decoration: none;
+}

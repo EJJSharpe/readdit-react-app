@@ -1,0 +1,49 @@
+p, h3{
+    margin: 0;
+}
+
+.cardsContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    grid-area: 'main';
+    background-color: grey;
+    border-radius: 0.2rem;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.articleCard{
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    border-style: solid;
+    border-width: 0.15rem;
+    margin: 0.5rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.headerLine{
+    padding-top: 0;
+    font-size: 0.8rem;
+    color: grey;
+    margin-bottom: 1rem;
+    span{
+        color: blue;
+        &:hover {
+            color: green;
+        }
+    }
+}
+
+.topicTag{
+    background-color: blue;
+    color: white;
+    width: min-content;
+    border-radius: 0.3rem;
+    padding: 0.1rem;
+
+}

@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+html, body{
+    background-color: grey;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif
+}
+
+.App{
+    width: 100%;
+}
+
+.innerGrid{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 65% auto;
+    grid-template-areas: 'main side';
+}

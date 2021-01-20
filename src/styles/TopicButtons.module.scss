@@ -1,0 +1,32 @@
+.topicsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-style: solid;
+    border-radius: 0.3rem;
+    border-width: 0.15rem;
+
+    h2{ 
+        margin: 0.25rem;
+    }
+}
+
+.topicsList{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.topicLink{
+    list-style-type: none;
+    text-decoration: none;
+    width: min-content;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    color: blue;
+    border-radius: 0.3rem;
+    
+}
