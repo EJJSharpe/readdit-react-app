@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar user={user} />
       <div className='innerGrid'>
         <div className='leftGrid'>
           <Router>
@@ -34,7 +34,6 @@ function App() {
       <Router>
         <SingleArticle path='/article/:article_id' user={user} />
       </Router>
-
     </div>
   );
 }

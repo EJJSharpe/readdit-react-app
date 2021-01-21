@@ -2,19 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { getArticles } from '../api'
 import { Link } from '@reach/router'
 import styles from '../styles/TopVotedList.module.scss'
+import Loading from './Loading'
 
 const TopVotedList = () => {
 
     const [topVotedList, setTopVotedList] = useState([])
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         const loadContent = async () => {
             setTopVotedList(await getArticles({ sortBy: 'votes', limit: 5 }))
+            setLoading(false)
         }
         loadContent()
     }, [])
 
-    return (
+    if (loading) return <Loading />
+    else return (
         <div className={styles.topVotedList}>
 
             <div className={styles.cardsContainer}>

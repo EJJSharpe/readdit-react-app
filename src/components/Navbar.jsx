@@ -3,11 +3,11 @@ import { Link } from '@reach/router';
 import styles from '../styles/Navbar.module.scss'
 
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
     return (
         <div className={styles.navbar}>
             <Link to='/' className={styles.readditLink}>Readdit</Link>
-            <p>Welcome <span>tickle122</span></p>
+            <p>Welcome <span>{user}</span></p>
         </div>
     );
 };
