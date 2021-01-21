@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { editArticleVotes, editCommentVotes } from '../api'
 import styles from '../styles/Voter.module.scss'
-import 'boxicons'
 
 const Voter = ({ votes, comment_id, article_id }) => {
     const [voteChange, setVoteChange] = useState(0)
