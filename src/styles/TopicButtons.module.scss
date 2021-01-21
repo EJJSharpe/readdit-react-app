@@ -28,11 +28,16 @@
     width: min-content;
     padding-right: 0.25rem;
     padding-left: 0.25rem;
-    color: white;
+    color: $darkblue;
+    font-weight: bold;
     border-radius: 0.3rem;
     background-color: $lightblue;
     padding: 0.1rem;
     margin: 0.1rem;
     margin-bottom: 1rem;
+
+    &:hover{
+        background: orange;
+    }
     
 }

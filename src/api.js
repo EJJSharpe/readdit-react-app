@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const getArticles = async ({ topic, sort_by, order, limit }) => {
+export const getArticles = async ({ topic, sortBy, order, limit }) => {
     const { data } = await axios.get("https://readdit-api.herokuapp.com/api/articles", {
-        params: { topic, sort_by, order, limit }
+        params: { topic, sort_by: sortBy, order, limit }
     })
     return data.articles;
 };

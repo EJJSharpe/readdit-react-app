@@ -4,6 +4,45 @@ p, h3{
     margin: 0;
 }
 
+.topBarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    
+}
+
+.postBar{
+    background-color: white;
+
+    border-radius: 0.5rem;
+    width: 100%;
+    height: min-content;
+    border-style: solid;
+    border-color: orange;
+}
+
+.postText{
+    margin-left: 1rem;
+    font-family: $poppins;
+}
+
+.sortButtonsContainer{
+    color: $lightblue;
+    display: flex;
+
+    button{
+        background-color: orange;
+        line-height: 0.25em;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin-left: 0.25rem;
+        font-family: $poppins;
+        
+    }
+}
+
 .cardsContainer{
     display: flex;
     width: 100%;

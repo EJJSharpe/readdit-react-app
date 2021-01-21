@@ -2,30 +2,66 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/ArticlesList.module.scss'
 import { getArticles } from '../api'
 import { Link } from '@reach/router'
-import spinner from '../images/loadingSpinner.svg'
 import Voter from '../components/Voter'
+import Loading from '../components/Loading'
 
-const ArticlesList = () => {
+const ArticlesList = ({ topic }) => {
 
     const [articlesList, setArticlesList] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
+    const [sortBy, setSortBy] = useState('created_at')
+    const [order, setOrder] = useState('desc')
 
     useEffect(() => {
         const loadContent = async () => {
-            setArticlesList(await getArticles({}))
-            setIsLoading(false)
+            setArticlesList(await getArticles({ topic, limit: 10, sortBy, order }))
+            setLoading(false)
         }
         loadContent()
-    }, [])
+    }, [topic, order, sortBy])
 
-    if (isLoading) return (
-        <div>
-            <img src={spinner} alt='loading' />
-        </div>
+
+    const handleSortByDate = async () => {
+        if (sortBy !== 'created_at') {
+            setSortBy('created_at')
+            setOrder()
+        }
+        if (sortBy === 'created_at' && order === 'desc') {
+            setOrder('asc')
+        } else {
+            setOrder('desc')
+        }
+    }
+
+    const handleSortByVote = async () => {
+        if (sortBy !== 'votes') {
+            setSortBy('votes')
+            setOrder('desc')
+        }
+        if (sortBy === 'votes' && order === 'desc') {
+            setOrder('asc')
+        } else {
+            setOrder('desc')
+        }
+    }
+
+
+
+
+    if (loading) return (
+        <Loading />
     )
 
     return (
         <div>
+            <div className={styles.topBarContainer}>
+                <button className={styles.postBar}><h3 className={styles.postText}>Post a new article</h3></button>
+                <div className={styles.sortButtonsContainer}>
+                    <button onClick={handleSortByVote}><p>votes</p></button>
+                    <button onClick={handleSortByDate}><p>date</p></button>
+                </div>
+            </div>
+
             <div className={styles.cardsContainer}>
                 {articlesList.map(article => {
 

@@ -34,10 +34,10 @@ const CommentsSection = ({ article_id, user }) => {
                 const { comment_id, author, body, created_at, votes } = comment;
                 return (
                     <div key={comment_id} className={styles.singleComment}>
-                        <p>{body}</p>
+                        <p className={styles.body}>{body}</p>
                         <p className={styles.author}>{author}</p>
                         <Voter votes={votes} comment_id={comment_id} />
-                        <p>{new Date(created_at).toDateString()}</p>
+                        <p className={styles.date}>{new Date(created_at).toDateString()}</p>
                         {author === user ? <button className={styles.deleteButton} onClick={() => { handleDeleteComment(comment_id) }}><i class='bx bx-trash'></i></button> : null}
                     </div>
 

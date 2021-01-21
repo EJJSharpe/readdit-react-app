@@ -9,7 +9,7 @@ const TopVotedList = () => {
 
     useEffect(() => {
         const loadContent = async () => {
-            setTopVotedList(await getArticles({ sort_by: 'votes', limit: 5 }))
+            setTopVotedList(await getArticles({ sortBy: 'votes', limit: 5 }))
         }
         loadContent()
     }, [])
@@ -18,7 +18,7 @@ const TopVotedList = () => {
         <div className={styles.topVotedList}>
 
             <div className={styles.cardsContainer}>
-                <h2>Top Voted List</h2>
+                <h2>Top Voted</h2>
                 {topVotedList.map(article => {
                     return (
                         <div key={article.article_id} className={styles.articleCard}>

@@ -27,11 +27,13 @@ const SingleArticle = ({ article_id, user }) => {
     else return (
         <div className={styles.container}>
             <div className={styles.article}>
-                <h3>{title}</h3>
-                <p>{body}</p>
-                <p>{topic}</p>
-                <p>{author}</p>
-                <p>{new Date(created_at).toDateString()}</p>
+                <div className={styles.articleText}>
+                    <h3>{title}</h3>
+                    <p>{body}</p>
+                    <p>{topic}</p>
+                    <p>{author}</p>
+                    <p>{new Date(created_at).toDateString()}</p>
+                </div>
                 <CommentsSection article_id={article_id} user={user} />
             </div>
         </div>
