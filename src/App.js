@@ -1,40 +1,26 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
-import ArticlesList from './components/ArticlesList'
 import './styles/index.scss'
-import TopVotedList from './components/TopVotedList'
-import TopicButtons from './components/TopicButtons'
-import SingleArticle from './components/SingleArticle'
+import Home from './pages/Home'
+import Article from './pages/Article'
+import PostArticle from './pages/PostArticle'
 import { Router } from '@reach/router'
 
 function App() {
   const [user, setUser] = useState('tickle122')
 
   return (
+
     <div className="App">
       <Navbar user={user} />
-      <div className='innerGrid'>
-        <div className='leftGrid'>
-          <Router>
-            <ArticlesList path='/' />
-            <ArticlesList path='/:topic' />
-          </Router>
-        </div>
-        <div className='rightGrid'>
-          <Router>
-            <TopicButtons path='/' />
-            <TopicButtons path='/:topic' />
-          </Router>
-          <Router>
-            <TopVotedList path='/' />
-            <TopVotedList path='/:topic' />
-          </Router>
-        </div>
-      </div>
+
       <Router>
-        <SingleArticle path='/article/:article_id' user={user} />
+        <Home path='/*' />
+        <Article user={user} path='/article/*' />
+        <PostArticle user={user} path='/postArticle' />
       </Router>
     </div>
+
   );
 }
 

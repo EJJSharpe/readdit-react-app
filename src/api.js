@@ -45,3 +45,10 @@ export const editArticleVotes = async (article_id, content) => {
     return response;
 }
 
+export const postArticle = async (article) => {
+    console.log(article)
+    const response = await axios
+        .post(`https://readdit-api.herokuapp.com/api/articles`, article)
+    console.log(response)
+    return response;
+}

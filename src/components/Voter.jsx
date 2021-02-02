@@ -32,9 +32,9 @@ const Voter = ({ votes, comment_id, article_id }) => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.upVote} disabled={upVote} onClick={() => handleVote(1)}><i class='bx bx-like' ></i></button>
+            <button className={styles.upVote} disabled={upVote} onClick={() => handleVote(1)}><i className='bx bx-like' ></i></button>
             <p>{votes + voteChange}</p>
-            <button className={styles.downVote} disabled={downVote} onClick={() => handleVote(-1)}><i class='bx bx-dislike'></i></button>
+            <button className={styles.downVote} disabled={downVote} onClick={() => handleVote(-1)}><i className='bx bx-dislike'></i></button>
         </div >
     );
 };

@@ -55,7 +55,7 @@ const ArticlesList = ({ topic }) => {
     return (
         <div>
             <div className={styles.topBarContainer}>
-                <button className={styles.postBar}><h3 className={styles.postText}>Post a new article</h3></button>
+                <Link className={styles.postLink} to='/postArticle' className={styles.postBar}><h3 className={styles.postText}>Post a new article</h3></Link>
                 <div className={styles.sortButtonsContainer}>
                     <button onClick={handleSortByVote}><p>votes</p></button>
                     <button onClick={handleSortByDate}><p>date</p></button>

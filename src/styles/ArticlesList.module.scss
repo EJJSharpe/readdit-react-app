@@ -14,17 +14,27 @@ p, h3{
 
 .postBar{
     background-color: white;
-
     border-radius: 0.5rem;
     width: 100%;
     height: min-content;
     border-style: solid;
     border-color: orange;
+    text-align: center;
+}
+
+.postLink{
+    text-decoration: none;
+
+    h3{
+        text-decoration: none;
+    }
 }
 
 .postText{
     margin-left: 1rem;
     font-family: $poppins;
+    font-size: 1rem;
+
 }
 
 .sortButtonsContainer{
